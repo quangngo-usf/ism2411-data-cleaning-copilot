@@ -3,6 +3,7 @@ from pathlib import Path
 
 
 # Load CSV file
+# Purpose: load a CSV file from a given path and return a pandas DataFrame
 
 def load_data(file_path):
     file = Path(file_path)
@@ -22,7 +23,8 @@ def clean_column_names(df):
         .str.replace("-", "_")
     )
     return df
-
+# Copilot suggested simple replace spaces with underscores
+# I added .str.replace("-", "_") to handle dashes as well
 
 
 # Rename known columns

@@ -14,3 +14,24 @@ ism2411-data-cleaning-copilot/
 │ └── data_cleaning.py
 ├── README.md
 └── reflection.md
+
+## How to Run the Script
+
+1. Install Python 3
+
+Make sure Python 3 is installed on your system.
+
+2. Install Dependencies
+
+This project uses pandas:
+
+pip install pandas
+
+3. Run the Script
+python src/data_cleaning.py
+
+4. Output
+
+After running, the cleaned CSV file will be saved in:
+
+data/processed/sales_data_clean.csv

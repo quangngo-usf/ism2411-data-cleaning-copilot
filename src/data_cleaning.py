@@ -11,6 +11,8 @@ def load_data(file_path):
 
 
 # Clean column names
+# Standardize column names so future operations work reliably
+# Copilot generated .str.strip() and .str.lower(), I added dash replacement
 def clean_column_names(df):
     df.columns = (
         df.columns.str.strip()
@@ -19,6 +21,8 @@ def clean_column_names(df):
         .str.replace("-", "_")
     )
     return df
+# Copilot originally suggested this function.
+# I modified it by adding .str.replace("-", "_") to handle dashes.
 
 
 # Rename known columns
@@ -42,6 +46,8 @@ def handle_missing_values(df):
 
 
 # Convert price and quantity to numeric
+# Convert price/quantity to numeric to allow comparison and math
+
 def convert_to_numeric(df):
     for col in ["price", "quantity"]:
         if col in df.columns:
@@ -50,6 +56,8 @@ def convert_to_numeric(df):
 
 
 # Remove invalid rows
+# Remove impossible values like negative prices or quantities
+
 def remove_invalid_rows(df):
     if "price" in df.columns:
         df = df[df["price"] >= 0]

@@ -6,6 +6,16 @@ For this project, I learned how to clean data using Python and how to use GitHub
 
 ## What I Modified
 After Copilot generated the initial functions, I made several changes to make the code clearer and more accurate. I renamed some variables so they were easier to understand, and I simplified some of Copilot’s logic so the steps were more direct. I also added my own conditions, like checking if a file exists and making sure columns like “price” and “quantity” actually exist before cleaning them. These changes were needed to avoid errors, match the style of the assignment, and make sure the script worked correctly with the messy dataset.
+To be more specific, I made changes to make the cleaning process more complete and accurate:
+I added .str.replace("-", "_") so column names would be consistent.
+
+I added numeric conversion because the raw data had numbers stored as strings.
+
+I added a function to remove rows with negative values, which Copilot did not handle.
+
+I reorganized the script to make sure each cleaning step happened in the correct order.
+
+
 
 ## What I Learned
 This assignment taught me how important it is to validate and clean real-world data before using it. Even simple problems like extra spaces, inconsistent column names, or negative numbers can cause errors later. I learned how to standardize column names, convert columns safely, drop invalid rows, and write a repeatable cleaning pipeline. I also learned that data cleaning is always step-by-step: small, consistent transformations lead to a much cleaner final dataset.
